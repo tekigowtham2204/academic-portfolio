@@ -94,8 +94,8 @@ export function HeroSection() {
                 fontWeight: 400,
               }}
             >
-              Aspiring GenAI Product Manager building LLM-powered products
-              across Healthcare, EdTech, and FinTech.
+              AI Product Analyst shipping LLM-powered products and driving
+              growth through data — Python, SQL, Amplitude, and LLM APIs.
             </motion.p>
 
             <motion.div
@@ -104,7 +104,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-wrap gap-2 justify-center lg:justify-start"
             >
-              {["GenAI PM", "LLM Systems", "User Research", "Product Strategy", "RAG Pipelines"].map(
+              {["AI Product Analyst", "LLM APIs", "Data Analytics", "Growth", "RAG Systems"].map(
                 (tag) => (
                   <span
                     key={tag}

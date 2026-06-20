@@ -37,7 +37,7 @@ export function AboutSection() {
               fontWeight: 500,
             }}
           >
-            <span className="text-gray-400">AI Product Developer</span> with
+            <span className="text-gray-400">AI Product Analyst</span> with
             hands-on experience shipping{" "}
             <span className="text-gray-400">LLM-powered products</span> and
             driving growth through data. Fluent in{" "}

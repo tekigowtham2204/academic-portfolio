@@ -5,7 +5,7 @@ import { SectionHeading } from "./SectionHeading";
 const experiences = [
   {
     id: 1,
-    role: "AI Product Developer",
+    role: "AI Product Analyst",
     company: "Syncgaze",
     companyUrl: "https://syncgaze.com",
     companyDesc: "AI-first product company",
