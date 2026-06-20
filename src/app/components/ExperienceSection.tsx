@@ -5,11 +5,28 @@ import { SectionHeading } from "./SectionHeading";
 const experiences = [
   {
     id: 1,
+    role: "AI Product Developer",
+    company: "Syncgaze",
+    companyUrl: "https://syncgaze.com",
+    companyDesc: "AI-first product company",
+    period: "May 2026 — Present",
+    current: true,
+    responsibilities: [
+      "Led cross-functional product initiatives from discovery through launch, writing specifications, coordinating engineering execution, and driving go-to-market strategy — leading 3 major product launches that grew user base by 20% month-over-month",
+      "Built comprehensive analytics infrastructure tracking 25+ key performance indicators across AI products using Amplitude and Mixpanel dashboards",
+      "Orchestrated the migration of legacy tracking to a unified data schema, improving data accuracy by 95% and enabling granular cohort-based retention strategies",
+      "Collaborated with design teams in Figma to prototype AI-first UX components, resulting in a streamlined interface that reduced time-to-value for new enterprise users",
+    ],
+    tags: ["AI Product", "Amplitude", "Mixpanel", "Figma", "Analytics", "GTM"],
+  },
+  {
+    id: 2,
     role: "Product Strategist",
     company: "Stulancer",
     companyUrl: "https://www.stulancers.com/",
     companyDesc: "A student-centric freelancing platform",
     period: "Oct 2025 — Present",
+    current: true,
     responsibilities: [
       "Defining product vision and go-to-market strategy for a student-first freelancing marketplace",
       "Conducting user research with students and early clients to identify friction points and prioritise feature roadmaps",
@@ -83,17 +100,19 @@ function ExperienceCard({
         <div className="flex items-start justify-between mb-6">
           <div>
             <div className="flex items-center gap-3 mb-1">
-              <span
-                className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100"
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "0.7rem",
-                  fontWeight: 600,
-                  letterSpacing: "0.04em",
-                }}
-              >
-                Current
-              </span>
+              {experience.current && (
+                <span
+                  className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100"
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "0.7rem",
+                    fontWeight: 600,
+                    letterSpacing: "0.04em",
+                  }}
+                >
+                  Current
+                </span>
+              )}
               <span
                 className="text-gray-300"
                 style={{
