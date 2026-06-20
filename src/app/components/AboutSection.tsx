@@ -37,16 +37,18 @@ export function AboutSection() {
               fontWeight: 500,
             }}
           >
-            Aspiring{" "}
-            <span className="text-gray-400">GenAI Product Manager</span> with
-            hands-on experience building{" "}
-            <span className="text-gray-400">LLM-powered products</span> across
-            Healthcare, EdTech, and FinTech. Combines user-centric problem
-            framing with technical fluency in{" "}
-            <span className="text-gray-400">RAG pipelines</span>, prompt
-            engineering, and agentic AI systems. Skilled in authoring PRDs,
-            defining success metrics, and scoping MVPs using frameworks like
-            RICE, JTBD, and OKRs.
+            <span className="text-gray-400">AI Product Developer</span> with
+            hands-on experience shipping{" "}
+            <span className="text-gray-400">LLM-powered products</span> and
+            driving growth through data. Fluent in{" "}
+            <span className="text-gray-400">Python, SQL</span>, Amplitude, and
+            Mixpanel — building analytics infrastructure, running A/B tests, and
+            automating reporting pipelines with{" "}
+            <span className="text-gray-400">n8n</span> and LangChain. Deep
+            experience with{" "}
+            <span className="text-gray-400">LLM API integration</span>, RAG
+            systems, local LLM deployment, and AI agent architecture using
+            Claude and OpenAI.
           </p>
         </motion.div>
 
@@ -67,7 +69,7 @@ export function AboutSection() {
             {
               icon: <Mail size={18} />,
               label: "Email",
-              value: "tekigowtham04@gmail.com",
+              value: "tekigowtham07@gmail.com",
             },
             {
               icon: <GraduationCap size={18} />,
