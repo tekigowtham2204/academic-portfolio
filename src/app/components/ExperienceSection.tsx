@@ -25,8 +25,8 @@ const experiences = [
     company: "Stulancer",
     companyUrl: "https://www.stulancers.com/",
     companyDesc: "A student-centric freelancing platform",
-    period: "Oct 2025 — Present",
-    current: true,
+    period: "Oct 2025 — Apr 2026",
+    current: false,
     responsibilities: [
       "Defining product vision and go-to-market strategy for a student-first freelancing marketplace",
       "Conducting user research with students and early clients to identify friction points and prioritise feature roadmaps",
