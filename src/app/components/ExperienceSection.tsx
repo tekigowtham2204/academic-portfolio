@@ -1,41 +1,9 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 import { SectionHeading } from "./SectionHeading";
-
-const experiences = [
-  {
-    id: 1,
-    role: "AI Product Analyst",
-    company: "Syncgaze",
-    companyUrl: "https://syncgaze.com",
-    companyDesc: "AI-first product company",
-    period: "May 2026 — Present",
-    current: true,
-    responsibilities: [
-      "Led cross-functional product initiatives from discovery through launch, writing specifications, coordinating engineering execution, and driving go-to-market strategy — leading 3 major product launches that grew user base by 20% month-over-month",
-      "Built comprehensive analytics infrastructure tracking 25+ key performance indicators across AI products using Amplitude and Mixpanel dashboards",
-      "Orchestrated the migration of legacy tracking to a unified data schema, improving data accuracy by 95% and enabling granular cohort-based retention strategies",
-      "Collaborated with design teams in Figma to prototype AI-first UX components, resulting in a streamlined interface that reduced time-to-value for new enterprise users",
-    ],
-    tags: ["AI Product", "Amplitude", "Mixpanel", "Figma", "Analytics", "GTM"],
-  },
-  {
-    id: 2,
-    role: "Product Strategist",
-    company: "Stulancer",
-    companyUrl: "https://www.stulancers.com/",
-    companyDesc: "A student-centric freelancing platform",
-    period: "Oct 2025 — Apr 2026",
-    current: false,
-    responsibilities: [
-      "Defining product vision and go-to-market strategy for a student-first freelancing marketplace",
-      "Conducting user research with students and early clients to identify friction points and prioritise feature roadmaps",
-      "Collaborating cross-functionally with design and engineering to scope and ship MVP features",
-      "Tracking key activation and retention metrics; iterating product decisions based on data",
-    ],
-    tags: ["Product Strategy", "GTM", "User Research", "Roadmapping", "Marketplace"],
-  },
-];
+import { experience } from "../data/portfolio-data";
 
 export function ExperienceSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -62,9 +30,7 @@ export function ExperienceSection() {
         />
 
         <div className="space-y-8">
-          {experiences.map((exp, i) => (
-            <ExperienceCard key={exp.id} experience={exp} index={i} />
-          ))}
+          <ExperienceCard key={experience.id} exp={experience} index={0} />
         </div>
       </div>
     </section>
@@ -72,10 +38,10 @@ export function ExperienceSection() {
 }
 
 function ExperienceCard({
-  experience,
+  exp,
   index,
 }: {
-  experience: (typeof experiences)[0];
+  exp: typeof experience;
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -100,7 +66,7 @@ function ExperienceCard({
         <div className="flex items-start justify-between mb-6">
           <div>
             <div className="flex items-center gap-3 mb-1">
-              {experience.current && (
+              {exp.current && (
                 <span
                   className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100"
                   style={{
@@ -121,7 +87,7 @@ function ExperienceCard({
                   fontWeight: 400,
                 }}
               >
-                {experience.period}
+                {exp.period}
               </span>
             </div>
             <h3
@@ -133,7 +99,7 @@ function ExperienceCard({
                 lineHeight: 1.3,
               }}
             >
-              {experience.role}
+              {exp.role}
             </h3>
             <p
               className="text-gray-400 mt-1"
@@ -144,12 +110,12 @@ function ExperienceCard({
               }}
             >
               <a
-                href={experience.companyUrl}
+                href={exp.companyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-900 transition-colors duration-200 underline underline-offset-2 decoration-gray-200 hover:decoration-gray-400"
               >
-                {experience.company}
+                {exp.company}
               </a>{" "}
               <span
                 style={{
@@ -159,14 +125,14 @@ function ExperienceCard({
                 }}
                 className="text-gray-300"
               >
-                — {experience.companyDesc}
+                — {exp.companyDesc}
               </span>
             </p>
           </div>
         </div>
 
         <ul className="space-y-2 mb-6">
-          {experience.responsibilities.map((item, idx) => (
+          {exp.responsibilities.map((item, idx) => (
             <li
               key={idx}
               className="flex items-start gap-3 text-gray-500"
@@ -182,20 +148,31 @@ function ExperienceCard({
           ))}
         </ul>
 
-        <div className="flex flex-wrap gap-2">
-          {experience.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 rounded-full bg-gray-50 text-gray-500 border border-gray-100"
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: "0.72rem",
-                fontWeight: 500,
-              }}
-            >
-              {tag}
-            </span>
-          ))}
+        <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-50">
+          <div className="flex flex-wrap gap-2">
+            {exp.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 rounded-full bg-gray-50 text-gray-500 border border-gray-100"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: "0.72rem",
+                  fontWeight: 500,
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <Link
+            to="/experience/syncgaze"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-900 hover:text-gray-600 transition-colors no-underline group-hover:translate-x-0.5"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            Read Detailed Breakdown
+            <ArrowRight size={13} />
+          </Link>
         </div>
       </motion.div>
     </motion.div>

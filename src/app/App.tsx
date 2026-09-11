@@ -1,27 +1,22 @@
-import { SmoothScrollProvider } from "./components/SmoothScrollProvider";
-import { Header } from "./components/Header";
-import { HeroSection } from "./components/HeroSection";
-import { AboutSection } from "./components/AboutSection";
-import { ExperienceSection } from "./components/ExperienceSection";
-import { ProjectsSection } from "./components/ProjectsSection";
-import { SkillsSection } from "./components/SkillsSection";
-import { ContactSection } from "./components/ContactSection";
+import { Routes, Route, Navigate } from "react-router";
+import Layout from "./Layout";
+import HomePage from "./pages/HomePage";
+import { ProjectPage } from "./pages/projects/ProjectPages";
+import SyncgazeExperience from "./pages/experience/SyncgazeExperience";
+import EducationPage from "./pages/EducationPage";
+import ResumePage from "./pages/ResumePage";
 
 export default function App() {
   return (
-    <SmoothScrollProvider>
-      <div
-        className="relative min-h-screen bg-white"
-        style={{ fontFamily: "'Inter', sans-serif" }}
-      >
-        <Header />
-        <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <ContactSection />
-      </div>
-    </SmoothScrollProvider>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects/:slug" element={<ProjectPage />} />
+        <Route path="/experience/syncgaze" element={<SyncgazeExperience />} />
+        <Route path="/education" element={<EducationPage />} />
+        <Route path="/resume" element={<ResumePage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
   );
 }

@@ -7,8 +7,8 @@ const links = [
   {
     icon: <Mail size={20} />,
     label: "Email",
-    value: "tekigowtham04@gmail.com",
-    href: "mailto:tekigowtham04@gmail.com",
+    value: "tekigowtham07@gmail.com",
+    href: "mailto:tekigowtham07@gmail.com",
   },
   {
     icon: <Phone size={20} />,

@@ -94,8 +94,8 @@ export function HeroSection() {
                 fontWeight: 400,
               }}
             >
-              AI Product Analyst shipping LLM-powered products and driving
-              growth through data — Python, SQL, Amplitude, and LLM APIs.
+              AI Product Developer building full-stack platforms and
+              LLM-powered products — Python, TypeScript, LangChain, and AI Agent Architecture.
             </motion.p>
 
             <motion.div
@@ -104,7 +104,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-wrap gap-2 justify-center lg:justify-start"
             >
-              {["AI Product Analyst", "LLM APIs", "Data Analytics", "Growth", "RAG Systems"].map(
+              {["Full-Stack AI", "LLM APIs", "Multi-Tenant Architecture", "RAG Systems", "AI Agents"].map(
                 (tag) => (
                   <span
                     key={tag}
@@ -229,7 +229,7 @@ export function HeroSection() {
                 style={{ transformStyle: "preserve-3d", transform: "translateZ(40px)" }}
               >
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", fontWeight: 500, color: "#9ca3af", letterSpacing: "0.08em", textTransform: "uppercase" }}>Focus</p>
-                <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "#111827" }}>AI / ML</p>
+                <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "#111827" }}>Full-Stack AI</p>
               </motion.div>
 
               {/* ── Dot grid decoration ── */}

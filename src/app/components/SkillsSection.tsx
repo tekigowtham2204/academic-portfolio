@@ -1,45 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { SectionHeading } from "./SectionHeading";
-
-const skillCategories = [
-  {
-    title: "GenAI & LLMs",
-    items: ["GPT-4", "Gemini", "Prompt Engineering", "RAG", "LangChain", "Fine-tuning Evaluation", "Agentic AI"],
-  },
-  {
-    title: "Product",
-    items: [
-      "PRDs",
-      "OKRs",
-      "RICE Scoring",
-      "Roadmapping",
-      "User Stories",
-      "A/B Testing",
-      "Go-to-Market Strategy",
-    ],
-  },
-  {
-    title: "Research",
-    items: [
-      "User Interviews",
-      "Persona Development",
-      "JTBD",
-      "Competitive Analysis",
-      "Usability Testing",
-    ],
-  },
-  {
-    title: "Tools & Data",
-    items: ["Figma", "Miro", "Notion", "Jira", "Python", "SQL", "Google Analytics", "VS Code", "Antigravity"],
-  },
-];
-
-const certifications = [
-  { name: "Generative AI — Udemy", pdfUrl: "/certificates/gen-ai.pdf" },
-  { name: "Product Management — Udemy", pdfUrl: "/certificates/product-management.pdf" },
-  { name: "Machine Learning — Udemy", pdfUrl: "/certificates/machine-learning.pdf" },
-];
+import { skills as skillCategories, certifications } from "../data/portfolio-data";
 
 export function SkillsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -60,7 +22,7 @@ export function SkillsSection() {
 
       <div className="max-w-4xl mx-auto relative z-10">
         <SectionHeading
-          index="05"
+          index="04"
           label="Skills"
           subtitle="Technical toolkit and professional certifications."
         />
@@ -158,7 +120,7 @@ export function SkillsSection() {
                     fontWeight: 450,
                   }}
                 >
-                  {cert.name}
+                  {cert.name} — {cert.issuer}
                 </span>
               </motion.a>
             ))}

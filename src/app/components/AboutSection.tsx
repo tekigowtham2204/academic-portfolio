@@ -37,24 +37,24 @@ export function AboutSection() {
               fontWeight: 500,
             }}
           >
-            <span className="text-gray-400">AI Product Analyst</span> with
-            hands-on experience shipping{" "}
-            <span className="text-gray-400">LLM-powered products</span> and
-            driving growth through data. Fluent in{" "}
-            <span className="text-gray-400">Python, SQL</span>, Amplitude, and
-            Mixpanel — building analytics infrastructure, running A/B tests, and
-            automating reporting pipelines with{" "}
-            <span className="text-gray-400">n8n</span> and LangChain. Deep
-            experience with{" "}
-            <span className="text-gray-400">LLM API integration</span>, RAG
-            systems, local LLM deployment, and AI agent architecture using
-            Claude and OpenAI.
+            <span className="text-gray-400">AI Product Developer</span> with
+            hands-on experience engineering{" "}
+            <span className="text-gray-400">full-stack platforms</span> and
+            shipping LLM-powered products. Fluent in{" "}
+            <span className="text-gray-400">Python, SQL, TypeScript</span>, and
+            JavaScript — building multi-tenant architectures, RESTful services,
+            and database systems with{" "}
+            <span className="text-gray-400">LangChain</span> and modern
+            frameworks. Deep experience with{" "}
+            <span className="text-gray-400">LLM API integration</span>, Prompt
+            Engineering, RAG systems, Local LLM Deployment, and AI Agent
+            Architecture using Claude and OpenAI.
           </p>
         </motion.div>
 
         {/* Info cards */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -73,8 +73,13 @@ export function AboutSection() {
             },
             {
               icon: <GraduationCap size={18} />,
-              label: "Education",
-              value: "B.Tech ECE — LPU (2023-2027)",
+              label: "B.Tech — LPU",
+              value: "Electronics & Communication Eng. — CGPA: 6.64",
+            },
+            {
+              icon: <GraduationCap size={18} />,
+              label: "Intermediate — Tirumala Jr. College",
+              value: "MPC Stream — Percentage: 97%",
             },
           ].map((item) => (
             <motion.div
